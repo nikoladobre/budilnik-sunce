@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Početna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#"><img src="slike/logo.png"></a>
+        <nav>
+            <a href="#">Početna</a>
+            <a href="#naruci">Naruči</a>
+            <a href="#zasto_sunce">Zašto Sunce?</a>
+            <a href="#o_nama">O nama</a>
+        </nav>
+    </header>
+
+    <main>
+        <!--SLIDER-->
+        <div class="slider">
+            <div class="slider-content">
+                <div class="slide"><a href=""><img src="slike/temp.png" alt="Image 1"></a></div> <!--sat-->
+                <div class="slide"><img src="https://picsum.photos/id/2/1920/1080" alt="Image 2"></div> <!--geto andrej huberman-->
+                <div class="slide"><img src="https://picsum.photos/id/3/1920/1080" alt="Image 3"></div> <!--o nama srpski brend itd-->
+            </div>
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+
+
+        <!--NARUCI-->
+        <div id="naruci">
+            <div class="sat">
+                <img src="https://picsum.photos/700/700">
+            </div>
+            <div class="opis">
+                <h3>Budilnik Sunce</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis.</p>
+                <ul>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Dizajnirano i proizvedeno u Srbiji</li>
+                </ul>
+                <p class="naruci-btn">NARUČI</p>
+            </div>
+        </div>
+        
+        <!--ZASTO SUNCE-->
+        <div id="zasto_sunce">
+            <div class="prvi-red">
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="drugi-red">
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="zasto">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="text">
+                        <h2>Lorem.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--OCENE-->
+        <div class="komentari">
+            <div class="ocena">
+                <div class="korisnik">
+                    <i class="fa-solid fa-user"></i>
+                    <h6>A A</h6>
+                </div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="ocena">
+                <div class="korisnik">
+                    <i class="fa-solid fa-user"></i>
+                    <h6>B B</h6>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, mollitia.</p>
+            </div>
+            <div class="ocena">
+                <div class="korisnik">
+                    <i class="fa-solid fa-user"></i>
+                    <h6>C C</h6>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+        
+        <!--O NAMA-->
+        <div id="o_nama">
+            <div class="prica">
+                <img src="slike/prica.png">
+                <img class="black" src="slike/black.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium provident saepe amet reiciendis in.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, molestiae?</p>
+        <div class="social">
+            <a href="#"><img src="https://picsum.photos/35"></a>
+            <a href="#"><img src="https://picsum.photos/35"></a>
+            <a href="#"><img src="https://picsum.photos/35"></a>
+            <a href="#"><img src="https://picsum.photos/35"></a>
+            <a href="#"><img src="https://picsum.photos/35"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
