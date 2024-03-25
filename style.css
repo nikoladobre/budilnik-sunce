@@ -1,3 +1,4 @@
+/* INDEX.HTML */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-header {
+#header-slider {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,6 +29,20 @@ header {
     z-index: 100;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
 header img {
     margin-left: 75px;
     height: 75px;
@@ -38,8 +53,8 @@ nav a {
     font-size: 20px;
     font-weight: bolder;
     margin: 0 20px;
-    color: white;
-    text-shadow: 0px 0px 5px black;
+    color: #f8bd59;
+    text-shadow: 0px 0px 1.5px black;
 }
 
 nav a::before {
@@ -49,12 +64,20 @@ nav a::before {
     left: 0;
     width: 0;
     height: 3px;
-    background-color: white;
+    background-color: #f8bd59;
     transition: .3s;
 }
 
-nav a:hover::before {
+nav a:hover::before {   
     width: 100%;
+}
+
+#toggle-nav {
+    display: none;
+}
+
+.toggle-nav {
+    display: none;
 }
 
 .slider {
@@ -77,7 +100,7 @@ nav a:hover::before {
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 950px;
 }
 
 .prev, .next {
@@ -101,7 +124,7 @@ nav a:hover::before {
 }
 
 #naruci {
-    margin: 75px;
+    margin: 50px;
     padding-top: 100px;
     display: flex;
     justify-content: space-around;
@@ -109,39 +132,78 @@ nav a:hover::before {
 
 .naruci-btn {
     position: relative;
-    top: 60%;
+    top: 5%;
     left: 0%;
     border: 5px black outset;
+    background-color: lightgray;
     text-align: center;
     padding: 5px;
 }
 
 .naruci-btn:hover {
+    background-color: gray;
     border: 5px black inset;
 }
 
-.sat {
-
+.opis h3 {
+    margin: 10px 10px 20px 0px;
+    font-size: xx-large;
 }
 
-.opis {
+ul {
+    position: relative;
+    top: 0;
+    left: 5%;
+    margin-top: 10px;
+}
 
+.madein {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 30px;
+}
+
+.quote {
+    padding: 15px;
+    margin-top: 25px;
+    padding-left: 25px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.cena {
+    margin: 25px;
+    font-size: xx-large;
 }
 
 #zasto_sunce {
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .prvi-red, .drugi-red {
-    padding: 50px;
+    padding: 5px;
+}
+
+.prvi-red {
+    padding-top: 50px;
+}
+
+.drugi-red {
+    padding-bottom: 50px;
 }
 
 .zasto {
-    background-color: skyblue;
+    background-color: #f8bd57;
     display: inline-block;
     justify-content: space-around;
     padding: 20px;
     margin: 25px;
+    width: 300px;
+    height: 175px;
 }
 
 .icon, .text {
@@ -149,68 +211,67 @@ nav a:hover::before {
 }
 
 .icon {
+    padding: 10px;
     font-size: 40px;
     display: block;
 }
 
-
 .komentari {
-
+    padding: 0px 300px;
 }
 
 .ocena {
     margin: 25px;
     padding: 25px;
-    background-color: pink;
+    background-color: #f8bd57;
+}
+
+.ocena p{
+    font-size: larger;
 }
 
 .korisnik {
     display: flex;
+    margin: 10px;
 }
 
-
-#o_nama {
-    margin-top: 75px;
+.korisnik i {
+    font-size: x-large;
 }
 
-.prica {
-    position: relative;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    z-index: 0;
+.korisnik h6 {
+    font-size: large;
 }
 
-.prica p {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    z-index: 2;
+.dodaj {
+    margin-left: 25px;
 }
 
-.black {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    width: 100%;
-    height: 300px;
-    z-index: 1;
+.dodaj label {
+    display: flex;
+}
+
+.dodaj input, textarea {
+    margin: 5px;
+}
+
+.salji {
+    padding: 5px;
 }
 
 footer {
     text-align: center;
     width: 100%;
-    background-color: yellow;
+    background-color: transparent;
     padding: 20px 0;
+    padding-top: 100px;
     justify-content: space-around;
     display: flex;
 }
 
 footer p {
     margin-left: 75px;
+    font-size: x-large;
 }
 
 .social {
@@ -224,4 +285,240 @@ footer p {
 .social img {
     width: 35px;
     height: 35px;
+}
+
+
+
+/* BLOG.HTML */
+.blog-wrapper {
+    width: 100%;
+    margin-left: 250px;
+}
+
+.blog {
+    display: flex;
+    margin: 50px;
+}
+
+.blog img {
+    height: 200px;
+    width: 300px;
+    margin-right: 25px;
+}
+
+.naslov{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.yt-link {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+/*BLOG1.HTML*/
+/*BLOG2.HTML*/
+/*BLOG3.HTML*/
+.prica-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 100px;
+}
+
+.naslov-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prica-naslov {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.prica-img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.text {
+    width: 100%;
+}
+
+.prica-p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    header {
+        position: sticky;
+        background-color: white;
+    }
+    
+    .toggle-nav {
+        display: block;
+        margin: auto;
+        font-size: xx-large;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 20px;
+        color: #f8bd59;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 0px 0px 1px black;
+    }
+
+    #toggle-nav:checked + .toggle-nav + nav {
+        display: block;
+    }
+    
+    #toggle-nav {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .slide img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    #naruci {
+        margin: 5px;
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .opis {
+        margin-top: 20px;
+    }
+    .naruci-btn {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #zasto_sunce {
+        padding: 20px;
+    }
+
+    .prvi-red, .drugi-red {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .zasto {
+        width: 90%;
+        max-width: 300px;
+        margin: 15px auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .komentari {
+        padding: 0px 20px;
+    }
+
+    .ocena {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .ocena p {
+        font-size: medium;
+    }
+
+    .korisnik {
+        margin: 5px 0;
+    }
+
+    .korisnik i {
+        font-size: large;
+    }
+
+    .korisnik h6 {
+        font-size: medium;
+    }
+
+    .dodaj {
+        margin-left: 0;
+    }
+
+    .dodaj p {
+        font-size: medium;
+    }
+
+    .dodaj label {
+        display: block;
+    }
+
+    .dodaj input,
+    .dodaj textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer p {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+    .social {
+        margin-left: 0;
+    }
+    .social a {
+        margin: 5px;
+    }
+    .social img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .prica-img {
+        max-width: 100%;
+        height: 75px;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
 }

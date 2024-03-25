@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Početna</title>
+    <title>Sunce</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="/slike/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
+    <header id="header-slider">
         <a href="#"><img src="slike/logo.png"></a>
+        <input type="checkbox" id="toggle-nav"> <!-- Add checkbox for toggling navigation -->
+        <label for="toggle-nav" class="toggle-nav"><i class="fas fa-bars"></i></label> <!-- Add label for toggle button -->
         <nav>
-            <a href="#">Početna</a>
-            <a href="#naruci">Naruči</a>
-            <a href="#zasto_sunce">Zašto Sunce?</a>
-            <a href="#o_nama">O nama</a>
+            <a href="index.html">Početna</a>
+            <a href="index.html#naruci">Naruči</a>
+            <a href="index.html#zasto_sunce">Zašto Sunce?</a>
+            <a href="blog.html">Blog</a>
+            <a href="blog1.html">O nama</a>
         </nav>
     </header>
 
@@ -22,9 +27,10 @@
         <!--SLIDER-->
         <div class="slider">
             <div class="slider-content">
-                <div class="slide"><a href=""><img src="slike/temp.png" alt="Image 1"></a></div> <!--sat-->
-                <div class="slide"><img src="https://picsum.photos/id/2/1920/1080" alt="Image 2"></div> <!--geto andrej huberman-->
-                <div class="slide"><img src="https://picsum.photos/id/3/1920/1080" alt="Image 3"></div> <!--o nama srpski brend itd-->
+                <div class="slide"><a href=""><img src="slike/slider.png"></a></div>
+                <div class="slide"><a href=""><img src="slike/promo.png"></a></div>
+                <div class="slide"><a href=""><img src="slike/student.png"></a></div>
+                <!--poklon od roditelja koji brine za zdravlje deteta-->
             </div>
             <a class="prev" onclick="prevSlide()">&#10094;</a>
             <a class="next" onclick="nextSlide()">&#10095;</a>
@@ -34,18 +40,23 @@
         <!--NARUCI-->
         <div id="naruci">
             <div class="sat">
-                <img src="https://picsum.photos/700/700">
+                <img src="slike/sat.png">
             </div>
             <div class="opis">
                 <h3>Budilnik Sunce</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis.</p>
+                <p>Budilnik Sunce je okruglog oblika prečnika oko 20 centimetara u koji je integrisan led displej
+                    i zvučnik. </p>
                 <ul>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Dizajnirano i proizvedeno u Srbiji</li>
+                    <li>Podešavanja izlazka i zalaska Sunca (tok od 10, 20, 30, 40, 50, 60 minuta)</li>
+                    <li>10 tonova za budilnik + mogućnost personalizovanih zvuka</li>
+                    <li>Višenamensko svetlo</li>
+                    <li>Bluetooth povezivanje sa telefonom</li>
+                    <li>FM Radio</li>
+                    <li>Dizajnirano i proizvedeno u Srbiji <img class="madein" src="slike/serbia.jpg"></li>
                 </ul>
-                <p class="naruci-btn">NARUČI</p>
+                <p class="quote"><i>"Zdravlje je neprocenjivo bogatstvo. Investiraj u njega dok još možeš."<br><th>– Bryant McGill</i></p>
+                <p class="cena">Cena: 130€</p>
+                <p class="naruci-btn" onclick="alert(`Hvala na kupovini ;)`)"><b>NARUČI</b></p>
             </div>
         </div>
         
@@ -53,47 +64,41 @@
         <div id="zasto_sunce">
             <div class="prvi-red">
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-regular fa-sun"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Simulira izlazak i zalazak Sunca.</b></p>
                     </div>
                 </div>
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-regular fa-face-smile"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Budite se odmorni i srećni svako jutro.</b></p>
                     </div>
                 </div>
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Budilnik ne remeti cirkadijalni ritam.</b></p>
                     </div>
                 </div>
             </div>
             <div class="drugi-red">
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-solid fa-music"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Personalizovan zvuk za budilnik.</b></p>
                     </div>
                 </div>
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-regular fa-lightbulb"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Višenamensko svetlo za sve potrebe.</b></p>
                     </div>
                 </div>
                 <div class="zasto">
-                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <div class="icon"><i class="fa-regular fa-thumbs-up"></i></div>
                     <div class="text">
-                        <h2>Lorem.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <p><b>Pozitivno zadovoljstvo korisnika.</b></p>
                     </div>
                 </div>
             </div>
@@ -103,45 +108,56 @@
         <div class="komentari">
             <div class="ocena">
                 <div class="korisnik">
-                    <i class="fa-solid fa-user"></i>
-                    <h6>A A</h6>
+                    <i class="fa-solid fa-user"></i>&emsp;
+                    <p>Aleksa Đurić</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Cena je velika, ali vredi svaki dinar :)</p>
             </div>
             <div class="ocena">
                 <div class="korisnik">
-                    <i class="fa-solid fa-user"></i>
-                    <h6>B B</h6>
+                    <i class="fa-solid fa-user"></i>&emsp;
+                    <p>Dragana Jović Popović</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, mollitia.</p>
+                <p>Odličan sat za one koji se bude rano!</p>
             </div>
             <div class="ocena">
                 <div class="korisnik">
-                    <i class="fa-solid fa-user"></i>
-                    <h6>C C</h6>
+                    <i class="fa-solid fa-user"></i>&emsp;
+                    <p>Aleksa Spasić Aleksić</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <p>Stvarno sjajan sat!</p>
+            </div>
+            <div class="ocena">
+                <div class="korisnik">
+                    <i class="fa-solid fa-user"></i>&emsp;
+                    <>Marko Momčilović</p>
+                </div>
+                <p>Od kad sam dobio od majke budilnik Sunce više ne kasnim u školu. <i>#budilnikSunce</i></p>
+            </div>
+
+            <div class="dodaj">
+                <p>Podeli svoje mišljenje o budilniku Sunce.</p>
+                <label>Ime: </label>
+                <input type="text">
+                <br>
+                <label>Komentar: </label>
+                <textarea cols="50" rows="5"></textarea>
+                <br>
+                <input class="salji" type="submit" value="Postavi Komentar">
             </div>
         </div>
+
         
-        <!--O NAMA-->
-        <div id="o_nama">
-            <div class="prica">
-                <img src="slike/prica.png">
-                <img class="black" src="slike/black.png">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi praesentium provident saepe amet reiciendis in.</p>
-            </div>
-        </div>
     </main>
 
     <footer>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, molestiae?</p>
+        <p>Budi zdrav, Budi se uz Sunce!</p>
         <div class="social">
-            <a href="#"><img src="https://picsum.photos/35"></a>
-            <a href="#"><img src="https://picsum.photos/35"></a>
-            <a href="#"><img src="https://picsum.photos/35"></a>
-            <a href="#"><img src="https://picsum.photos/35"></a>
-            <a href="#"><img src="https://picsum.photos/35"></a>
+            <a href="#"><img src="slike/youtube.png"></a>
+            <a href="#"><img src="slike/instagram.jpeg"></a>
+            <a href="#"><img src="slike/tiktok.png"></a>
+            <a href="#"><img src="slike/facebook.png"></a>
+            <a href="#"><img src="slike/pinterest.png"></a>
         </div>
     </footer>
 
