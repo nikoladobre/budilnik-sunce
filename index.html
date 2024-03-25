@@ -29,7 +29,7 @@
             <div class="slider-content">
                 <div class="slide"><a href=""><img src="slike/slider.png"></a></div>
                 <div class="slide"><a href=""><img src="slike/promo.png"></a></div>
-                <div class="slide"><a href=""><img src="slike/student.png"></a></div>
+                <div class="slide"><a href=""><img src="slike/student2.png"></a></div>
                 <!--poklon od roditelja koji brine za zdravlje deteta-->
             </div>
             <a class="prev" onclick="prevSlide()">&#10094;</a>
@@ -55,7 +55,8 @@
                     <li>Dizajnirano i proizvedeno u Srbiji <img class="madein" src="slike/serbia.jpg"></li>
                 </ul>
                 <p class="quote"><i>"Zdravlje je neprocenjivo bogatstvo. Investiraj u njega dok još možeš."<br><th>– Bryant McGill</i></p>
-                <p class="cena">Cena: 130€</p>
+                <div class="timer"><h4>Vreme do isteka akcije: </h4><h1 id="timer">00:00:00</h1></div>
+                <p class="cena">Cena: <span class="cross">160€</span> <span class="red">130€</span><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="poklon">+ poklon uz budilnik</span></p>
                 <p class="naruci-btn" onclick="alert(`Hvala na kupovini ;)`)"><b>NARUČI</b></p>
             </div>
         </div>
@@ -130,7 +131,7 @@
             <div class="ocena">
                 <div class="korisnik">
                     <i class="fa-solid fa-user"></i>&emsp;
-                    <>Marko Momčilović</p>
+                    <p>Marko Momčilović</p>
                 </div>
                 <p>Od kad sam dobio od majke budilnik Sunce više ne kasnim u školu. <i>#budilnikSunce</i></p>
             </div>
@@ -153,14 +154,48 @@
     <footer>
         <p>Budi zdrav, Budi se uz Sunce!</p>
         <div class="social">
-            <a href="#"><img src="slike/youtube.png"></a>
-            <a href="#"><img src="slike/instagram.jpeg"></a>
-            <a href="#"><img src="slike/tiktok.png"></a>
-            <a href="#"><img src="slike/facebook.png"></a>
-            <a href="#"><img src="slike/pinterest.png"></a>
+            <a href="https://www.youtube.com/channel/UCSQ6F6Z0AS-ufcVpUcwabFw"><img src="slike/youtube.png"></a>
+            <a href="https://www.instagram.com/sunce_budilnik/"><img src="slike/instagram.jpeg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61557458881008"><img src="slike/facebook.png"></a>
+            <a href="https://www.pinterest.com/suncebudilnik/"><img src="slike/pinterest.png"></a>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        let timer;
+        let totalSeconds = 3600 * 12;
+
+        function startTimer() {
+            timer = setInterval(updateTimer, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+        }
+
+        function updateTimer() {
+            totalSeconds--;
+
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            const formattedTime = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+
+            document.getElementById('timer').textContent = formattedTime;
+
+            if (totalSeconds === 0) {
+                stopTimer();
+                alert('Time is up!');
+            }
+        }
+
+        function pad(val) {
+            return val < 10 ? '0' + val : val;
+        }
+
+        startTimer();
+    </script>
 </body>
 </html>

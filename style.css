@@ -10,10 +10,12 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 #header-slider {
@@ -173,9 +175,29 @@ ul {
     text-align: center;
 }
 
+#timer {
+}
+
+.timer {
+    padding: 5px;
+}
+
 .cena {
     margin: 25px;
     font-size: xx-large;
+}
+
+.poklon {
+    font-size: large;
+}
+
+.cross {
+    text-decoration: line-through;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
 }
 
 #zasto_sunce {
@@ -317,6 +339,12 @@ footer p {
     text-decoration: underline;
 }
 
+.email {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
 
 
 /*BLOG1.HTML*/
@@ -359,9 +387,6 @@ footer p {
 }
 
 
-
-
-
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -376,6 +401,11 @@ footer p {
         display: block;
         margin: auto;
         font-size: xx-large;
+    }
+
+    header img {
+        margin-left: 25px;
+        height: 75px;
     }
 
     nav {
@@ -417,14 +447,21 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
+
     .quote {
         width: 80%;
         margin: auto;
         margin-top: 20px;
     }
+
+    .sat img{
+        width: 300px;
+    }
+
     .opis {
         margin-top: 20px;
     }
+
     .naruci-btn {
         width: 80%;
         margin: auto;
@@ -499,26 +536,59 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
+
     footer p {
         margin-left: 0;
         margin-bottom: 10px;
         font-size: medium;
     }
+
     .social {
         margin-left: 0;
     }
+
     .social a {
         margin: 5px;
     }
+
     .social img {
         width: 30px;
         height: 30px;
     }
 
+    .prica-wrapper {
+        margin: 0px 50px;
+    }
+
+    .naslov-wrapper {
+        display: block;
+    }
+
     .prica-img {
         max-width: 100%;
-        height: 75px;
+        width: 100%;
         border-radius: 8px;
         margin-right: 20px;
+    }
+
+    .blog-wrapper {
+        margin-left: 0;
+    }
+
+    .blog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog img {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .email {
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -18,6 +18,6 @@ let slideIndex = 0;
         showSlide(--slideIndex);
     }
 
-    setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 7500);
 
     showSlide(slideIndex);

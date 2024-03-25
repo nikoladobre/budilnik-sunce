@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunce</title>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="icon" type="image/x-icon" href="/slike/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/slike/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <a href="#"><img src="slike/logo.png"></a>
+        <a href="index.html#pocetna"><img src="slike/logo.png"></a>
         <input type="checkbox" id="toggle-nav"> <!-- Add checkbox for toggling navigation -->
         <label for="toggle-nav" class="toggle-nav"><i class="fas fa-bars"></i></label> <!-- Add label for toggle button -->
         <nav>
@@ -24,11 +24,18 @@
     </header>
 
     <div class="blog-wrapper">
+        <a href="blog4.html"><div class="blog">
+            <img src="slike/student.png">
+            <div class="blog4">
+                <p class="naslov"><b>Savršen poklon đacima i studentima</b></p>
+                <p>Kako bolje pokazati detetu da Vam je stalo do njegovog zdravlja nego sa poklonom koji je stvoren da im poboljša san i zdravlje.</p>
+            </div>
+        </div></a>
         <a href="blog3.html"><div class="blog">
-            <img src="slike/slider.png">
+            <img src="slike/women.jpeg">
             <div class="blog3">
-                <p class="naslov"><b>NESTO IDK</b></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, rerum.</p>
+                <p class="naslov"><b>Podeli priču</b></p>
+                <p>Podeli priči o budilniku Sunce! <i>#budilnikSunce</i></p>
             </div>
         </div></a>
         <a href="blog2.html"><div class="blog">
@@ -37,7 +44,7 @@
                 <a href="blog2.html"><p class="naslov"><b>Andrija Hubermanović Podcast</b></p></a>
                 <p>Andrija Hubermanović, naučnik i profesor, će Vam objasniti važnost dobrog sna i njegovog uticaja na zdravlje.</p>
                 <br>
-                <a class="yt-link" href="#">Odgledaj podcast na našem zvaničnom YouTube kanalu</a>
+                <a class="yt-link" href="https://youtu.be/ovzfAWCkesw">Odgledaj podcast na našem zvaničnom YouTube kanalu</a>
             </div>
         </div></a>
         <a href="blog1.html"><div class="blog">
@@ -49,14 +56,19 @@
         </div></a>
     </div>
 
+    <div class="email">
+        <label>Prijavite se na naš newsletter:&emsp;</label>
+        <br>
+        <input type="email">&ensp;<input type="submit" value="Prijavi se" onclick="alert(`Hvala :)`)">
+    </div>
+
     <footer>
         <p>Budi zdrav, Budi se uz Sunce!</p>
         <div class="social">
-            <a href="#"><img src="slike/youtube.png"></a>
-            <a href="#"><img src="slike/instagram.jpeg"></a>
-            <a href="#"><img src="slike/tiktok.png"></a>
-            <a href="#"><img src="slike/facebook.png"></a>
-            <a href="#"><img src="slike/pinterest.png"></a>
+            <a href="https://www.youtube.com/channel/UCSQ6F6Z0AS-ufcVpUcwabFw"><img src="slike/youtube.png"></a>
+            <a href="https://www.instagram.com/sunce_budilnik/"><img src="slike/instagram.jpeg"></a>
+            <a href="https://www.facebook.com/profile.php?id=61557458881008"><img src="slike/facebook.png"></a>
+            <a href="https://www.pinterest.com/suncebudilnik/"><img src="slike/pinterest.png"></a>
         </div>
     </footer>
 </body>
